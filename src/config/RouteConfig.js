@@ -1,0 +1,250 @@
+const fileRouteText = "file";
+const projectRouteText = "project";
+
+module.exports = {
+  login: {
+    list: "login",
+  },
+  dashboard: {
+    list: "dashboard",
+  },
+
+  elements: {
+    list: "elements",
+  },
+  profile_details: {
+    list: "profile_details",
+  },
+  CustRoute: {
+    list: "customers",
+    add: "add-customer",
+    edit: "edit-customer",
+  },
+  clientRoute: {
+    add: "add-clients",
+    edit: "edit-clients",
+  },
+  VillageRoute: {
+    list: "village",
+  },
+  CityRoute:{
+    list:"city"
+  },
+  TpschemeRoute: {
+    list: "tpscheme",
+  },
+  EmpRoute: {
+    list: "teams",
+    add: "add-team",
+    edit: "edit-team",
+    deposit_expense_report: "deposit-expense-report",
+    deposit_expense_report_pdf: "deposit-expense-report-pdf",
+    team_profile_details: "team-profile-details",
+    EditProfile: "edit-profile",
+    teamprofile: "team-profile",
+    hrprofile: "hr-profile",
+  },
+  DepositExpenseRoute: {
+    list: "deposit-expense",
+    add: "add-deposit-expense",
+    edit: "edit-deposit-expense",
+  },
+  FileExpenseRoute: {
+    list: "file-expenses",
+    add: "add-file-expense",
+    edit: "edit-file-expense",
+    preview: "preview-file-expense",
+  },
+  OfficeExpenseRoute: {
+    list: "office-expenses",
+    add: "add-office-expense",
+    edit: "edit-office-expense",
+    preview: "preview-office-expense",
+  },
+  FilesRoute: {
+    list: `${fileRouteText}`,
+    listFileOnline: `${fileRouteText}/file-online`,
+    listFileOffline: `${fileRouteText}/file-offline`,
+    listFileBuc: `${fileRouteText}/file-buc`,
+    listFileApproved: `${fileRouteText}/file-approved`,
+    listFileReject: `${fileRouteText}/file-reject`,
+    listFileProject: `${fileRouteText}/file-project`,
+    add: `add-file`,
+    edit: `edit-file`,
+    fileDetail: `file-details`,
+    listFileExpense: `${fileRouteText}/file-expense`,
+    file_expense_pdf: `${fileRouteText}/file-expense-pdf`,
+    file_todos: `${fileRouteText}/todos`,
+  },
+  ProjectRoute: {
+    listProjectOnline: `${projectRouteText}/project-online`,
+    listProjectOffline: `${projectRouteText}/project-offline`,
+    listProjectBUC: `${projectRouteText}/project-buc`,
+    listProjectApproved: `${projectRouteText}/project-approved`,
+    listProjectReject: `${projectRouteText}/project-reject`,
+    projectDetails: `${projectRouteText}/project-details`,
+  },
+  ArchitectureRoute: {
+    list: "project-list",
+    add: "add-project",
+    preview: "preview-project",
+    edit: "edit-architecture",
+    details: `${projectRouteText}/project-details`,
+    basicdetails: "architecture-basic-detail",
+    study: "architecture-study",
+    consultants: "architecture-consultants",
+    drawing: "architecture-drawing",
+    quotation: "architecture-quotation",
+    documents: "architecture-documents",
+    material: "architecture-material",
+    schedule: "architecture-schedule",
+    riskMatrix: "architecture-risk-matrix",
+    sitevisit: "architecture-site-visit",
+  },
+  TodosRoute: {
+    list: "todos",
+    add: "add-todo",
+    edit: "edit-todo",
+    reviewtodo: "todo-review",
+    markTodo: "mark-todo",
+    hodreviewtodo: "hod-review-todo",
+    
+  },
+  SearchRoute: {
+    list: "search",
+  },
+  LeaveRoute: {
+    list: "team-leave",
+    add: "team-add-leave",
+    edit: "team-edit-leave",
+    previewLeave: "team-preview-leave",
+    listLeaveOfTeam: "team-list-leave",
+  },
+
+  SiteRoute: {
+    list: "sites",
+    add: "add-sites",
+    edit: "edit-sites",
+    preview: "sites-preview",
+    emplist: "emp-list",
+  },
+  ApprovalRoute: {
+    add: "add-approval-process",
+    approval_list: "approval-list",
+    document_add: "document-add",
+    pv_list: "pv-list",
+    pv_add: "pv-add",
+    fire_noc_add: "fire-noc-add",
+    e_nagar_portal_add: "e-nagar-add",
+    buildingpermissionadd: "building-permission-add",
+    sitevisit: "approval-site-visit",
+  },
+  AttendanceRoute: {
+    list: "attendance",
+    leavelist: "leave-list",
+    monthlist: "month-list",
+    tracklist: "track-list",
+    minuteslist: "minutes-list",
+    emplist: "emp-attendance",
+  },
+  MeetingRoute: {
+    operational_list: "operational",
+    tacticallist: "tactical",
+    strategiclist: "strategic",
+    strategicview: "strategic-view",
+    operationalview: "operational-view",
+    empmeetingview: "emp-operational-view",
+    performancelist: "performance-list",
+    tacticalview: "tactical-view",
+    tacticalperformancelist: "tactical-performance-list",
+    startegicperformancelist: "strategic-performance-list",
+    topperformer: "top-performer",
+    addteam: "meeting-team",
+  },
+  InteriorRoute: {
+    list: "interior-list",
+    edit: "edit-interior",
+    basicdetails: "add-basic-details",
+    study: "add-study",
+    consultants: "add-consultants",
+    quotation: "add-quotation",
+    concept: "add-concept",
+    technicaldrawing: "add-technical-drawing",
+    riskMatrix: "add-risk-matrix",
+    schedule: "add-schedule",
+    sitevisit: "interior-site-visit",
+  },
+  TentativeRoute: {
+    list: "tentative-list",
+    edit: "edit-tentative",
+  },
+  InwardRoute: {
+    list: "inward-list",
+    add: "add-inward",
+  },
+  OutwardRoute: {
+    list: "outward-list",
+    add: "add-outward",
+  },
+  ShiftRoute: {
+    list: "shift-list",
+  },
+  CampaignRoute: {
+    list: "campaign-list",
+    add: "add-campaign",
+    detail: "campaign-details",
+    emplist: "emp-campaign-list",
+  },
+  PostRoute: {
+    list: "post-list",
+    emplist: "emp-post-list",
+    add: "add-post",
+    edit: "edit-post",
+    detail: "detail-post",
+  },
+  LeadsRoute: {
+    list: "leads-list",
+    emplist: "emp-leads-list",
+    detail: "leads-detail",
+  },
+  LocationRoute: {
+    location: "live-location",
+    member: "member-location",
+    team: "team-location",
+  },
+  PaymentRoute: {
+    reports: "payment-reports",
+    list: "payments-list",
+    add: "add-payments",
+    edit: "edit-payments",
+    expense: "payment-expense-list",
+    addexpense: "add-payment-expense",
+    editexpense: "edit-payment-expense",
+    escrowIncome: "escrow-income",
+    escrowincomeAdd: "add-escrow-income",
+    escrowincomeEdit: "edit-escrow-income",
+    escrowExpense: "escrow-expense",
+    escrowexpenseAdd: "add-escrow-expense",
+    escrowexpenseEdit: "edit-escrow-expense",
+    escrowReports: "escrow-reports",
+  },
+  VendorRoute: {
+    list: "vendor-list",
+  },
+  LedgerRoute: {
+    list: "ledger-list",
+  },
+  ReceiptRoute: {
+    list: "receipt-list",
+    add: "add-receipt",
+    edit: "edit-receipt",
+  },
+  PmsRoute:{
+    list:"pms-list",
+    add:"add-pms",
+    edit:"edit-pms"
+  },
+  WorkflowRoute: {
+    list: "workflow",
+  }
+};
