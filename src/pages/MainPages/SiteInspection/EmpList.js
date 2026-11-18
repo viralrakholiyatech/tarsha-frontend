@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "../../../config/backend";
 import React, { useEffect, useState, useMemo } from "react";
 import { deletesites, getempsitebyId } from "../../../config/config";
 import ApiService from "../../../services/ApiService";
@@ -135,7 +136,7 @@ function Badge({ text, type = "gold" }) {
 
 /** Client signature — image thumbnail or PDF icon */
 function ClientSign({ sign }) {
-  const FILE_BASE = "https://webappapi.zaidexceldesign.com"; // 🔧 change if URL changes
+  const FILE_BASE = BACKEND_URL; // 🔧 change if URL changes
   if (!sign) return <span style={{ color: THEME.textLight, fontSize: 12 }}>—</span>;
 
   const url   = `${FILE_BASE}/${sign}`;
@@ -589,7 +590,7 @@ export default EmpList;
 // const EmpList = () => {
 //   const navigate = useNavigate();
 
-//   let FileUrl = "https://webappapi.zaidexceldesign.com";
+//   let FileUrl = BACKEND_URL;
 //   var header = {
 //     Authorization: `Bearer ${getToken()}`,
 //     ["Content-type"]: "application/json",

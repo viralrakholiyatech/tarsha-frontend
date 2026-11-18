@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../../../config/backend";
 
 
 import React, { useEffect, useState, useRef } from "react";
@@ -455,7 +456,7 @@ const Header = (props) => {
                 className="hdr-avatar"
                 src={getUserProfilePic()}
                 alt="profile"
-                onError={(e) => { e.target.src = "https://webappapi.zaidexceldesign.com/public/img/profile.jpeg"; }}
+                onError={(e) => { e.target.src = `${PUBLIC_URL}/img/profile.jpeg`; }}
               />
               <span className="hdr-user-name">{getFullName()}</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={THEME.textMuted} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -1300,7 +1301,7 @@ export default Header;
 //                   alt="User Profile"
 //                   onError={(e) =>
 //                     (e.target.src =
-//                       "https://webappapi.zaidexceldesign.com/public/img/profile.jpeg")
+//                       `${PUBLIC_URL}/img/profile.jpeg`)
 //                   }
 //                 />
 //               </span>

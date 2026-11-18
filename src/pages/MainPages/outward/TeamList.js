@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "../../../config/backend";
 // ─────────────────────────────────────────────
 //  EmpOutwardList.jsx  —  Outward List (Employee)
 //  Same design as AdminOutwardList — no delete
@@ -30,7 +31,7 @@ const THEME = {
   textLight:  "#BDBDBD",
 };
 
-const FileBaseUrl = "https://webappapi.zaidexceldesign.com";
+const FileBaseUrl = BACKEND_URL;
 
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');

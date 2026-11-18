@@ -1,5 +1,5 @@
-    const URL = process.env.REACT_APP_API_URL;
-const application_url = "https://webappapi.zaidexceldesign.com";
+const { BACKEND_URL: application_url } = require("./backend");
+
 module.exports = {
     FileUrl : `${application_url}/public`,
     SvgUrl : `${application_url}/public`,

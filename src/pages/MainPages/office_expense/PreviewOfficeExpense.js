@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../../../config/backend";
 // ─────────────────────────────────────────────
 //  PreviewOfficeExpense.jsx  —  Preview & Approve
 //  Same design as PreviewFileExpense
@@ -73,7 +74,7 @@ const GLOBAL_CSS = `
   ::-webkit-scrollbar-thumb{background:${THEME.brandMid};border-radius:10px;}
 `;
 
-const FileUrls = "https://webappapi.zaidexceldesign.com/public";
+const FileUrls = PUBLIC_URL;
 
 
 // ─────────────────────────────────────────────

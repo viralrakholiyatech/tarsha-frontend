@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "../../../config/backend";
 // ─────────────────────────────────────────────
 //  SiteInspectionList.jsx
 //  All colours, table columns, and text live at
@@ -147,7 +148,7 @@ function ClientSign({ sign }) {
   if (!sign) return <span style={{ color: THEME.textLight, fontSize: 12 }}>—</span>;
 
   // 🔧 Change this base URL if your API changes
-  const FILE_BASE_URL = "https://webappapi.zaidexceldesign.com";
+  const FILE_BASE_URL = BACKEND_URL;
   const url    = `${FILE_BASE_URL}/${sign}`;
   const isPdf  = sign.toLowerCase().endsWith(".pdf");
 

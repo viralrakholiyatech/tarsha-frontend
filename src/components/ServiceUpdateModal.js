@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../config/backend";
 import React, { useEffect, useState } from "react";
 import { getServicebyId, updateService, fetchHod } from "../config/config";
 import ApiService from "../services/ApiService";
@@ -199,7 +200,7 @@ const PROJECT_TITLES = {
 //  🚀  MAIN COMPONENT
 // ─────────────────────────────────────────────
 const ServiceUpdateModal = ({ show, handleClose, fileId, onSuccess }) => {
-  const FileUrls = "https://webappapi.zaidexceldesign.com/public";
+  const FileUrls = PUBLIC_URL;
 
   const [loading, setLoading] = useState(false);
   const [submitting, setSubmitting] = useState(false);

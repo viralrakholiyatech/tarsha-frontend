@@ -1,6 +1,5 @@
-const URL ="http://localhost:7600/api"
+const { API_URL: URL } = require("./backend");
 
-  // "https://webappapi.zaidexceldesign.com/api";
 module.exports = {
   userlogin: {
     method: "POST",

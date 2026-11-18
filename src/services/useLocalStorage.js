@@ -9,7 +9,7 @@ import {
   HoD,
 } from "../config/RoleConfig";
 
-let FileUrl = `http://62.72.30.155:7600`
+const { BACKEND_URL: FileUrl } = require("../config/backend");
 
 const setInLocalStorage = (key, value) => {
   if (key) {

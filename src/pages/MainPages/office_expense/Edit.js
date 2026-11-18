@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../../../config/backend";
 // ─────────────────────────────────────────────
 //  EditOfficeExpense.jsx  —  Edit Office Expense
 //  Same design as AddOfficeExpense / EditFileExpense
@@ -80,7 +81,7 @@ const GLOBAL_CSS = `
   ::-webkit-scrollbar-thumb{background:${THEME.brandMid};border-radius:10px;}
 `;
 
-const FileUrls = "https://webappapi.zaidexceldesign.com/public";
+const FileUrls = PUBLIC_URL;
 
 
 // ─────────────────────────────────────────────

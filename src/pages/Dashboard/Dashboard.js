@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../../config/backend";
 
 import React, { useEffect, useMemo, useState, memo } from "react";
 import {
@@ -307,7 +308,7 @@ function StatusBadge({ status, onClick }) {
 
 function AvatarStack({
   profiles,
-  baseUrl = "https://webappapi.zaidexceldesign.com/public",
+  baseUrl = PUBLIC_URL,
 }) {
   if (!profiles)
     return <span style={{ color: THEME.textLight, fontSize: 12 }}>—</span>;

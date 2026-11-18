@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.REACT_APP_API_URL || "https://webappapi.zaidexceldesign.com/api";
+const { API_URL, PUBLIC_URL } = require("../config/backend");
 
 /**
  * Uploads a file directly to AWS S3 using a pre-signed URL.
@@ -74,10 +74,10 @@ export const deleteFileFromS3 = async (key) => {
  * Returns a displayable URL for both S3 full URLs and legacy local paths
  * 
  * @param {string} path - The stored file path or S3 URL
- * @param {string} [baseUrl="https://webappapi.zaidexceldesign.com/public"] - Legacy public files base URL
+ * @param {string} [baseUrl] - Legacy public files base URL
  * @returns {string} - Full accessible URL
  */
-export const getFileDisplayUrl = (path, baseUrl = "https://webappapi.zaidexceldesign.com/public") => {
+export const getFileDisplayUrl = (path, baseUrl = PUBLIC_URL) => {
   if (!path) return "";
   if (path.startsWith("http://") || path.startsWith("https://")) {
     if (path.includes(".amazonaws.com/")) {
@@ -135,7 +135,7 @@ export const getFileDisplayUrl = (path, baseUrl = "https://webappapi.zaidexcelde
  * Opens any file (S3 or local) in a new browser tab.
  * For S3 files, it fetches a fresh signed viewing URL from /api/s3/file-url to avoid AccessDenied.
  */
-export const openFileInNewTab = async (path, baseUrl = "https://webappapi.zaidexceldesign.com/public") => {
+export const openFileInNewTab = async (path, baseUrl = PUBLIC_URL) => {
   if (!path) return;
 
   const isS3 =

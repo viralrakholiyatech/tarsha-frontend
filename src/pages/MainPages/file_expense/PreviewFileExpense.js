@@ -1,3 +1,4 @@
+import { PUBLIC_URL } from "../../../config/backend";
 // ─────────────────────────────────────────────
 //  PreviewFileExpense.jsx  —  Preview & Approve
 //  Same design system as EditFileExpense
@@ -150,7 +151,7 @@ function SecondaryBtn({ children, onClick }) {
 
 // ─── Attachment card ──────────────────────────
 function AttachCard({ label, url }) {
-  const FileUrls = "https://webappapi.zaidexceldesign.com/public";
+  const FileUrls = PUBLIC_URL;
   return (
     <div className="pfe-attach-card">
       <span style={{ fontSize:24 }}>{url ? "🖼️" : "📄"}</span>
