@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const { API_URL } = require("../../config/backend");
-const API_BASE = (process.env.REACT_APP_SUPER_ADMIN_API || `${API_URL}/super-admin`).replace(/\/+$/, "");
+const { API_URL, resolveBackendUrl } = require("../../config/backend");
+const API_BASE = resolveBackendUrl(process.env.REACT_APP_SUPER_ADMIN_API || `${API_URL}/super-admin`);
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem("super_admin_token");
