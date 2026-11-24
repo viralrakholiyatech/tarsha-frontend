@@ -74,7 +74,7 @@ const OperationalModalAdd = ({ show, handleClose }) => {
         addoperationalmetting.url
       );
       if (res.status === 201 && !res.data.error) {
-        toast.success(res.data.message || "Operational Meeting added successfully");
+        toast.success(res.data.message || "Daily Overview Meeting added successfully");
         handleClose();
         window.location.reload();
       } else {
@@ -95,7 +95,7 @@ const OperationalModalAdd = ({ show, handleClose }) => {
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">Add Operational Meeting </h5>
+            <h5 className="modal-title">Add Daily Overview Meeting </h5>
             <button type="button" className="close" onClick={handleClose}>
               &times;
             </button>
