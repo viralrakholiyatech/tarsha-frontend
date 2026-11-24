@@ -281,7 +281,7 @@ function StrategicList() {
                 Monthly Review Meeting Schedule
               </h1>
               <p style={{ margin:"2px 0 0", fontSize:12, color:THEME.textMuted }}>
-                Meetings occur every 45 days — select a date to view detailed performance.
+                Meetings occur every 30 days — select a date to view detailed performance.
               </p>
             </div>
           </div>
