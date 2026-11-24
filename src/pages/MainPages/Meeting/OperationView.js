@@ -942,7 +942,7 @@ function OperationView() {
               letterSpacing: "-0.3px",
             }}
           >
-            Operational Meeting
+            Daily Overview Meeting
           </h1>
         </div>
 
