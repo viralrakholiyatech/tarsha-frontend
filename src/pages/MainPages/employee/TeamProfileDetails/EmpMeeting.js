@@ -203,7 +203,7 @@ function EmpMeeting() {
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:24 }}>
           <div style={{ width:4, height:26, borderRadius:3, background:`linear-gradient(180deg,${THEME.brand} 0%,${THEME.brandMid} 100%)` }} />
           <h1 style={{ margin:0, fontSize:22, fontWeight:800, color:THEME.text, fontFamily:"'Sora',sans-serif", letterSpacing:"-0.3px" }}>
-            Operational Meetings
+            Daily Overview Meetings
           </h1>
         </div>
 
@@ -219,7 +219,7 @@ function EmpMeeting() {
         {!loading && groupedData.length === 0 && (
           <div style={{ textAlign:"center", padding:"64px 0" }}>
             <div style={{ fontSize:40, marginBottom:10 }}>📅</div>
-            <p style={{ color:THEME.textLight, fontSize:14, margin:0 }}>No operational meetings found.</p>
+            <p style={{ color:THEME.textLight, fontSize:14, margin:0 }}>No Daily Overview meetings found.</p>
           </div>
         )}
 
