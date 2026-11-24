@@ -342,10 +342,10 @@ const Sidebar = () => {
         pathname === `/${MeetingRoute.operational_list}` ||
         segment1 === MeetingRoute.operationalview ||
         segment1 === MeetingRoute.performancelist,
-      tactical:
-        pathname === `/${MeetingRoute.tacticallist}` ||
-        segment1 === MeetingRoute.tacticalview ||
-        segment1 === MeetingRoute.tacticalperformancelist,
+      // tactical:
+      //   pathname === `/${MeetingRoute.tacticallist}` ||
+      //   segment1 === MeetingRoute.tacticalview ||
+      //   segment1 === MeetingRoute.tacticalperformancelist,
       strategic:
         pathname === `/${MeetingRoute.strategiclist}` ||
         segment1 === MeetingRoute.strategicview ||
@@ -712,11 +712,11 @@ const Sidebar = () => {
                     active={a.operational}
                   label="Daily Overview Meeting"
                   />
-                  <SubItem
+                  {/* <SubItem
                     to={`/${MeetingRoute.tacticallist}`}
                     active={a.tactical}
                     label="Tactical"
-                  />
+                  /> */}
                   <SubItem
                     to={`/${MeetingRoute.strategiclist}`}
                     active={a.strategic}
