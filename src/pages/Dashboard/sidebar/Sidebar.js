@@ -710,7 +710,7 @@ const Sidebar = () => {
                   <SubItem
                     to={`/${MeetingRoute.operational_list}`}
                     active={a.operational}
-                    label="Operational"
+                  label="Daily Overview Meeting"
                   />
                   <SubItem
                     to={`/${MeetingRoute.tacticallist}`}
