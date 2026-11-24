@@ -993,13 +993,14 @@ function TaskRow({
           <div style={{ display: "flex", gap: 6 }}>
             <EditBtn onClick={() => onEdit(item.id)} />
             <DeleteBtn onClick={() => onDelete(item.id)} />
-            <PlusBtn onClick={() => onUpdateTask(item)} />
+            // <PlusBtn onClick={() => onUpdateTask(item)} />
           </div>
-        ) : (
-          <div style={{ display: "flex", gap: 6 }}>
-            <PlusBtn onClick={() => onUpdateTask(item)} />
-          </div>
-        )}
+           ) : null}
+        // ) : (
+        //   <div style={{ display: "flex", gap: 6 }}>
+        //     <PlusBtn onClick={() => onUpdateTask(item)} />
+        //   </div>
+        // )}
       </td>
     </tr>
   );
