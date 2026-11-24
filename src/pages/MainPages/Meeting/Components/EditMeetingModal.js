@@ -1,10 +1,4 @@
-// ─────────────────────────────────────────────
-//  EditMeetingModal.jsx
-//  ✅ Bug fix: participants patch (remove one → saves correctly)
-//  ✅ Confirm modal when Facilitator changes → "Make HOD a team member?"
-//  ✅ Confirm modal when Participants change → "Update department too?"
-//  Brand design — no Bootstrap modal classes
-// ─────────────────────────────────────────────
+
 
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import ApiService from "../../../../services/ApiService";

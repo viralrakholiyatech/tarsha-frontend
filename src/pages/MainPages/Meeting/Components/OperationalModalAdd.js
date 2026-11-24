@@ -74,7 +74,7 @@ const OperationalModalAdd = ({ show, handleClose }) => {
         addoperationalmetting.url
       );
       if (res.status === 201 && !res.data.error) {
-        toast.success(res.data.message || "Operational Meeting added successfully");
+        toast.success(res.data.message || "Daily Overview Meeting added successfully");
         handleClose();
         window.location.reload();
       } else {

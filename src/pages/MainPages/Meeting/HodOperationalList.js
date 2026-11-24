@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────
-//  HodOperationalList.jsx  —  HOD Operational Meetings
-//  Same design as OperationalList — HOD endpoint
-// ─────────────────────────────────────────────
 
 import React, { useEffect, useState, useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
