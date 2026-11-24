@@ -37,7 +37,7 @@ import {
   VendorRoute,
   LedgerRoute,
   ReceiptRoute,
-  PmsRoute,
+  // PmsRoute,
   CityRoute,
   WorkflowRoute
 } from "../../../config/RouteConfig";
@@ -371,10 +371,10 @@ const Sidebar = () => {
       workflow:
         pathname === `/${WorkflowRoute.list}` ||
         segment1 === WorkflowRoute.list,
-      pms:
-        pathname === `/${PmsRoute.list}` ||
-        pathname === `/${PmsRoute.add}` ||
-        segment1 === PmsRoute.edit,
+      // pms:
+      //   pathname === `/${PmsRoute.list}` ||
+      //   pathname === `/${PmsRoute.add}` ||
+      //   segment1 === PmsRoute.edit,
       inward:
         pathname === `/${InwardRoute.list}` ||
         pathname === `/${InwardRoute.add}`,
@@ -688,14 +688,14 @@ const Sidebar = () => {
               />
             )}
 
-            {hasFeature("Work") && (
-              <NavItem
-                to={`/${PmsRoute.list}`}
-                active={a.pms}
-                icon="Task.svg"
-                label="PMS"
-              />
-            )}
+            // {hasFeature("Work") && (
+            //   <NavItem
+            //     to={`/${PmsRoute.list}`}
+            //     active={a.pms}
+            //     icon="Task.svg"
+            //     label="PMS"
+            //   />
+            // )}
 
             {/* Meeting dropdown */}
             {hasFeature("Meeting") && (
