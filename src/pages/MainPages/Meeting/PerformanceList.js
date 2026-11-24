@@ -1264,7 +1264,7 @@ function PerformanceList() {
                             {(item.clarity_2_key_highlight ||
                               item.clarity_2_key_action) && (
                               <ClarityCard
-                                title="Focus · Accomplishment · Reach Goal → Tactical / Strategic Meeting"
+                                title="Focus · Accomplishment · Reach Goal →  Monthly Meeting"
                                 accent="#D46B08"
                                 keyHighlight={item.clarity_2_key_highlight}
                                 keyAction={item.clarity_2_key_action}

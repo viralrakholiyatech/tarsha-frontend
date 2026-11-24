@@ -711,7 +711,7 @@ const ParticipantCard = memo(
                 onEdit={() => onShowModal(item.id)}
               />
               <ClarityBox
-                title="🎯 Focus → Tactical / Strategic Goals"
+                title="🎯 Focus →  Monthly Goals"
                 bg="#FFF7E6"
                 keyHighlight={item.clarity_2_key_highlight}
                 keyAction={item.clarity_2_key_action}

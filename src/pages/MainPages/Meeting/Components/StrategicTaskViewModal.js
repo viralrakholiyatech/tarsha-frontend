@@ -175,7 +175,7 @@ const StrategicTaskViewModal = ({ show, handleClose, id }) => {
                   margin: 0, fontSize: 16, fontWeight: 700,
                   color: THEME.text, fontFamily: "'Sora', sans-serif",
                 }}>
-                  Strategic Tasks
+                  Monthly Review Tasks
                 </h2>
                 {!loading && (
                   <p style={{ margin: 0, fontSize: 11, color: THEME.textMuted }}>

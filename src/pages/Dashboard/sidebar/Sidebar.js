@@ -720,7 +720,7 @@ const Sidebar = () => {
                   <SubItem
                     to={`/${MeetingRoute.strategiclist}`}
                     active={a.strategic}
-                    label="Strategic"
+                    label="Monthly Review Meeting"
                   />
                 </SubMenu>
               </>

@@ -240,7 +240,7 @@ const StrategicModal = ({ show, handleClose, id }) => {
                   margin: 0, fontSize: 16, fontWeight: 700,
                   color: THEME.text, fontFamily: "'Sora', sans-serif",
                 }}>
-                  Edit Strategic Performance
+                  Edit Monthly Review Meeting
                 </h2>
                 <p style={{ margin: 0, fontSize: 11, color: THEME.textMuted }}>
                   Reflect on what went well and what can improve
