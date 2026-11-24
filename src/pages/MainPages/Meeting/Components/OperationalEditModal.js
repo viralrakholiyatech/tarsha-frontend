@@ -141,7 +141,7 @@ const OperationalEditModal = ({ show, handleClose, editId }) => {
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">Add Operational Meeting </h5>
+            <h5 className="modal-title">Add Daily Overview Meeting </h5>
             <button type="button" className="close" onClick={handleClose}>
               &times;
             </button>
