@@ -861,7 +861,7 @@ const TaskRow = memo(({ item, index, onStatus, onCounter, onUpdateTask }) => {
         />
       </td>
       <td style={tdStyle()}>
-        <PlusBtn onClick={() => onUpdateTask(item)} />
+        {/* <PlusBtn onClick={() => onUpdateTask(item)} /> */}
       </td>
     </tr>
   );

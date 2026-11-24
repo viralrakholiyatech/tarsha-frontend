@@ -382,7 +382,7 @@ const EditMeetingModal = ({ show, handleClose, id, onSuccess }) => {
           <div className="em-header">
             <div className="em-header-left">
               <div className="em-header-bar" />
-              <h5 className="em-header-title">Edit Operational Meeting</h5>
+              <h5 className="em-header-title">Edit  Daily Review Meeting</h5>
             </div>
             <button type="button" className="em-close" onClick={handleClose}>✕</button>
           </div>

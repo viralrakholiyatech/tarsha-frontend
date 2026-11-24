@@ -37,9 +37,9 @@ import {
   VendorRoute,
   LedgerRoute,
   ReceiptRoute,
-  PmsRoute,
+  // PmsRoute,
   CityRoute,
-  WorkflowRoute
+  // WorkflowRoute
 } from "../../../config/RouteConfig";
 import {
   getRole,
@@ -368,13 +368,13 @@ const Sidebar = () => {
         pathname === `/${TodosRoute.add}` ||
         segment1 === TodosRoute.edit,
 
-      workflow:
-        pathname === `/${WorkflowRoute.list}` ||
-        segment1 === WorkflowRoute.list,
-      pms:
-        pathname === `/${PmsRoute.list}` ||
-        pathname === `/${PmsRoute.add}` ||
-        segment1 === PmsRoute.edit,
+      // workflow:
+      //   pathname === `/${WorkflowRoute.list}` ||
+      //   segment1 === WorkflowRoute.list,
+      // pms:
+      //   pathname === `/${PmsRoute.list}` ||
+      //   pathname === `/${PmsRoute.add}` ||
+      //   segment1 === PmsRoute.edit,
       inward:
         pathname === `/${InwardRoute.list}` ||
         pathname === `/${InwardRoute.add}`,
@@ -662,7 +662,7 @@ const Sidebar = () => {
         {hasAnyFeature("Work", "Meeting") && (
           <>
             <SectionHead label="Work" />
-            {hasFeature("Work") && (isAdmin || isHod) && (
+            {/* {hasFeature("Work") && (isAdmin || isHod) && (
               <NavItem
                 to={`/${WorkflowRoute.list}`}
                 active={a.workflow}
@@ -678,7 +678,7 @@ const Sidebar = () => {
                 }
                 label="Workflow"
               />
-            )}
+            )} */}
             {hasFeature("Work") && (isAdminOrSubadmin || isEmployee) && (
               <NavItem
                 to={`/${TodosRoute.list}`}
@@ -688,14 +688,14 @@ const Sidebar = () => {
               />
             )}
 
-            {hasFeature("Work") && (
+            {/* {hasFeature("Work") && (
               <NavItem
                 to={`/${PmsRoute.list}`}
                 active={a.pms}
                 icon="Task.svg"
                 label="PMS"
               />
-            )}
+            )} */}
 
             {/* Meeting dropdown */}
             {hasFeature("Meeting") && (
