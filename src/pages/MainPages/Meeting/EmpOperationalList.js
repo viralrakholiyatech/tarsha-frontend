@@ -1,8 +1,3 @@
-// ─────────────────────────────────────────────
-//  EmpOperationalList.jsx  —  Employee Operational Meetings
-//  Same design as OperationalList — no Generate button
-// ─────────────────────────────────────────────
-
 import React, { useEffect, useState, useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import ApiService from "../../../services/ApiService";
