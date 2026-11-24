@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────
-//  HodOperationalList.jsx  —  HOD Operational Meetings
-//  Same design as OperationalList — HOD endpoint
-// ─────────────────────────────────────────────
 
 import React, { useEffect, useState, useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
@@ -293,7 +289,7 @@ function HodOperationalList() {
             <div style={{ width:4, height:26, borderRadius:3, background:`linear-gradient(180deg,${THEME.brand} 0%,${THEME.brandMid} 100%)` }} />
             <div>
               <h1 style={{ margin:0, fontSize:22, fontWeight:800, color:THEME.text, fontFamily:"'Sora',sans-serif", letterSpacing:"-0.3px" }}>
-                Operational Meetings
+                Daily Overview Meetings
               </h1>
               <p style={{ margin:"2px 0 0", fontSize:12, color:THEME.textMuted }}>
                 Daily execution tracking and performance monitoring
