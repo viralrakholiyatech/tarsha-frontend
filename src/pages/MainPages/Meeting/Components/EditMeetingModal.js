@@ -1,10 +1,4 @@
-// ─────────────────────────────────────────────
-//  EditMeetingModal.jsx
-//  ✅ Bug fix: participants patch (remove one → saves correctly)
-//  ✅ Confirm modal when Facilitator changes → "Make HOD a team member?"
-//  ✅ Confirm modal when Participants change → "Update department too?"
-//  Brand design — no Bootstrap modal classes
-// ─────────────────────────────────────────────
+
 
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import ApiService from "../../../../services/ApiService";
@@ -382,7 +376,7 @@ const EditMeetingModal = ({ show, handleClose, id, onSuccess }) => {
           <div className="em-header">
             <div className="em-header-left">
               <div className="em-header-bar" />
-              <h5 className="em-header-title">Edit Operational Meeting</h5>
+              <h5 className="em-header-title">Edit Daily Overview Meeting</h5>
             </div>
             <button type="button" className="em-close" onClick={handleClose}>✕</button>
           </div>
