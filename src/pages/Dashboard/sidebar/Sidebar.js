@@ -213,640 +213,116 @@ const SubSubMenu = memo(({ open, children }) =>
 // ─── Inline Sidebar SVGs ───────────────────────
 const SIDEBAR_SVGS = {
   dashboard: (
-    <svg width="18" height="18" viewBox="0 0 21 21" fill="none">
-      <rect x="2" y="1" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="12" y="1" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="1" y="2" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="11" y="2" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="1" y="3" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="3" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="4" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="4" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="5" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="5" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="6" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="6" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="7" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="7" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="8" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="8" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="9" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="9" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="2" y="11" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.6"/>
-      <rect x="13" y="11" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.67"/>
-      <rect x="1" y="12" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="12" y="12" width="8" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="13" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="13" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="14" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="14" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="15" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="15" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="16" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="16" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="17" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="17" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="18" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="18" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="19" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="19" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <rect x="3" y="3" width="8" height="8" rx="2" />
+      <rect x="13" y="3" width="8" height="8" rx="2" />
+      <rect x="3" y="13" width="8" height="8" rx="2" />
+      <rect x="13" y="13" width="8" height="8" rx="2" />
     </svg>
   ),
   team: (
-    <svg width="18" height="18" viewBox="0 0 24 17" fill="none">
-      <rect x="3" y="0" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.37"/>
-      <rect x="10" y="0" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.39"/>
-      <rect x="17" y="0" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.4"/>
-      <rect x="3" y="1" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="9" y="1" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="16" y="1" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="2" y="2" width="13" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="16" y="2" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="3" width="19" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="3" y="4" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="4" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="16" y="4" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="4" y="5" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.41"/>
-      <rect x="8" y="5" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="17" y="5" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.35"/>
-      <rect x="3" y="6" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.62"/>
-      <rect x="9" y="6" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="16" y="6" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.56"/>
-      <rect x="2" y="7" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="7" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.16"/>
-      <rect x="16" y="7" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="1" y="8" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="8" y="8" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="17" y="8" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="9" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="7" y="9" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="17" y="9" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="1" y="10" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="7" y="10" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="18" y="10" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="11" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="11" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="18" y="11" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="3" y="12" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.26"/>
-      <rect x="6" y="12" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="18" y="12" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.2"/>
-      <rect x="6" y="13" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="7" y="14" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="15" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.66"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+      <path d="M18.5 10c1.38 0 2.5-1.12 2.5-2.5S19.88 5 18.5 5 16 6.12 16 7.5s1.12 2.5 2.5 2.5zm1 2c-1.07 0-2.09.28-2.98.77.62.91 1 2.01 1 3.23v2h4c.55 0 1-.45 1-1v-1c0-1.66-2-3-4.02-3zm-13-2c1.38 0 2.5-1.12 2.5-2.5S7.88 5 6.5 5 4 6.12 4 7.5 5.12 10 6.5 10zm-1 2C3.48 12 1.48 13.34 1.48 15v1c0 .55.45 1 1 1h4v-2c0-1.22.38-2.32 1-3.23-.89-.49-1.91-.77-2.98-.77z" opacity="0.85" />
     </svg>
   ),
   master: (
-    <svg width="18" height="18" viewBox="0 0 23 20" fill="none">
-      <rect x="7" y="1" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.43"/>
-      <rect x="4" y="2" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.26"/>
-      <rect x="6" y="2" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.71"/>
-      <rect x="11" y="2" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.36"/>
-      <rect x="3" y="3" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="3" y="4" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="18" y="4" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.44"/>
-      <rect x="2" y="5" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.58"/>
-      <rect x="16" y="5" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="1" y="6" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="10" y="6" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="15" y="6" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="1" y="7" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="10" y="7" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.78"/>
-      <rect x="19" y="7" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="3" y="8" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="10" y="8" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="15" y="8" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="19" y="8" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="3" y="9" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="10" y="9" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="15" y="9" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="2" y="10" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="16" y="10" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.66"/>
-      <rect x="2" y="11" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="14" y="11" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.42"/>
-      <rect x="18" y="11" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.35"/>
-      <rect x="5" y="12" width="6" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="12" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.75"/>
-      <rect x="5" y="13" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.78"/>
-      <rect x="8" y="13" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.64"/>
-      <rect x="12" y="13" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="12" y="14" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="17" y="14" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="15" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="17" y="15" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.71"/>
-      <rect x="11" y="16" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="17" y="16" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.64"/>
-      <rect x="12" y="17" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="12" y="18" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="14" y="19" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
     </svg>
   ),
   tentative: (
-    <svg width="18" height="18" viewBox="0 0 21 19" fill="none">
-      <rect x="9" y="0" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="9" y="1" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.61"/>
-      <rect x="3" y="2" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.4"/>
-      <rect x="9" y="2" width="1" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="15" y="2" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.39"/>
-      <rect x="3" y="3" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="7" y="3" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.57"/>
-      <rect x="11" y="3" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.68"/>
-      <rect x="14" y="3" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="4" y="4" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.66"/>
-      <rect x="5" y="5" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="13" y="5" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="5" y="6" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.61"/>
-      <rect x="4" y="7" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="1" y="8" width="18" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="1" y="9" width="18" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="5" y="10" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="11" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="6" y="12" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="13" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="7" y="14" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.51"/>
-      <rect x="7" y="15" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="8" y="16" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.5"/>
-      <rect x="8" y="17" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.71"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+      <circle cx="12" cy="9" r="2.5" />
     </svg>
   ),
   approval: (
-    <svg width="18" height="18" viewBox="0 0 20 19" fill="none">
-      <rect x="1" y="0" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.71"/>
-      <rect x="1" y="1" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="2" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="2" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="1" y="3" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="13" y="3" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="1" y="4" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="4" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.75"/>
-      <rect x="1" y="5" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="5" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.55"/>
-      <rect x="1" y="6" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="6" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="7" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="8" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="9" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.66"/>
-      <rect x="1" y="10" width="15" height="1" rx="0.3" fill="currentColor" opacity="0.53"/>
-      <rect x="1" y="11" width="17" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="1" y="12" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="12" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="13" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="8" y="13" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="16" y="13" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.6"/>
-      <rect x="1" y="14" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="15" y="14" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.68"/>
-      <rect x="1" y="15" width="18" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="1" y="16" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="16" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="17" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="3" y="18" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.19"/>
-      <rect x="14" y="18" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.19"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z" />
+      <path d="M10.8 17.2l-2.4-2.4 1.4-1.4 1 1 3.2-3.2 1.4 1.4-4.6 4.6z" fill="#19140F" />
     </svg>
   ),
   architecture: (
-    <svg width="18" height="18" viewBox="0 0 25 23" fill="none">
-      <rect x="16" y="0" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.43"/>
-      <rect x="14" y="1" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="20" y="1" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.61"/>
-      <rect x="12" y="2" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.32"/>
-      <rect x="14" y="2" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="19" y="2" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="11" y="3" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.45"/>
-      <rect x="18" y="3" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="10" y="4" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="17" y="4" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="9" y="5" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="16" y="5" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="8" y="6" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="15" y="6" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="7" y="7" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="14" y="7" width="8" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="8" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="13" y="8" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="5" y="9" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="12" y="9" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="4" y="10" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="11" y="10" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="18" y="10" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="4" y="11" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="10" y="11" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="18" y="11" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="2" y="12" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.54"/>
-      <rect x="5" y="12" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="9" y="12" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="18" y="12" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="1" y="13" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="6" y="13" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.28"/>
-      <rect x="8" y="13" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="18" y="13" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="14" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="7" y="14" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="18" y="14" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="15" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="6" y="15" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="18" y="15" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="5" y="16" width="6" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="18" y="16" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="4" y="17" width="18" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="3" y="18" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="19" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="8" y="19" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="13" y="19" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="16" y="19" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="2" y="20" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="8" y="20" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.56"/>
-      <rect x="13" y="20" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.64"/>
-      <rect x="16" y="20" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.65"/>
-      <rect x="19" y="20" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.66"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21.71 6.88l-4.59-4.59a1.003 1.003 0 0 0-1.41 0L14 4.01 4.7 13.31a.996.996 0 0 0-.29.71V19c0 .55.45 1 1 1h5c.27 0 .52-.11.71-.29l9.59-9.59 1.71-1.71c.39-.39.39-1.02 0-1.41zM6.41 18H6v-.41l8.59-8.59.41.41L6.41 18zm4.41 0l-1.41-1.41 8.59-8.59 1.41 1.41L10.82 18zm7.18-9.18l-1.41-1.41 1.59-1.59 1.41 1.41-1.59 1.59z" />
+      <path d="M2 21h20v1.5H2z" />
     </svg>
   ),
   interior: (
-    <svg width="18" height="18" viewBox="0 0 23 18" fill="none">
-      <rect x="3" y="0" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.66"/>
-      <rect x="7" y="0" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.2"/>
-      <rect x="3" y="1" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="7" y="1" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="3" y="2" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="6" y="2" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="3" y="3" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="6" y="3" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="4" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="3" y="5" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="3" y="6" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="7" y="6" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="7" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="6" y="7" width="13" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="8" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="6" y="8" width="14" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="3" y="9" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="7" y="9" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="3" y="10" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="5" y="10" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="9" y="10" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="3" y="11" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="5" y="11" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="3" y="12" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="5" y="12" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.61"/>
-      <rect x="17" y="12" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="13" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="5" y="13" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="14" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="5" y="14" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="0" y="15" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="5" y="15" width="15" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20 10V7c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v3c-1.1 0-2 .9-2 2v5h1.33L4 19h1.5l.67-2h11.66l.67 2H20l.67-2H22v-5c0-1.1-.9-2-2-2zm-9-3h2v5h-2V7zM6 7h3v5H6V7zm12 5h-3V7h3v5z" />
     </svg>
   ),
   workflow: (
-    <svg width="18" height="18" viewBox="0 0 21 19" fill="none">
-      <rect x="2" y="1" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="12" y="1" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="2" y="2" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="12" y="2" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="2" y="3" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="7" y="3" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="3" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="3" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="4" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="7" y="4" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="4" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="4" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="5" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="7" y="5" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="5" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="5" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="6" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="6" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="7" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="13" y="7" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="4" y="8" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.56"/>
-      <rect x="14" y="8" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.49"/>
-      <rect x="4" y="9" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.51"/>
-      <rect x="14" y="9" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.71"/>
-      <rect x="5" y="10" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="10" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="5" y="11" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="12" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="7" y="13" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="13" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="7" y="14" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="14" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="7" y="15" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="12" y="15" width="2" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="7" y="16" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="8" y="17" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 13c-1.35 0-2.48.9-2.85 2.13-1.63.22-3.15-.49-4.15-1.5-1-1.01-1.72-2.52-1.5-4.15C11.6 9.1 12.5 8 12.5 6.5A3.5 3.5 0 0 0 9 3 3.5 3.5 0 0 0 5.5 6.5c0 1.5 1 2.62 2.38 3.12-.22 2.15.65 4.3 2.12 5.78 1.47 1.47 3.63 2.34 5.78 2.12.38 1.38 1.5 2.48 2.87 2.48a3.5 3.5 0 0 0 3.5-3.5 3.5 3.5 0 0 0-3.5-3.5z" />
     </svg>
   ),
   task: (
-    <svg width="18" height="18" viewBox="0 0 20 18" fill="none">
-      <rect x="4" y="0" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.64"/>
-      <rect x="2" y="1" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="2" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="3" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="4" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="5" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="7" y="5" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.65"/>
-      <rect x="1" y="6" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="6" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="1" y="7" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="8" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="9" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="10" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="8" y="10" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="11" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="7" y="11" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="14" y="11" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="1" y="12" width="17" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="1" y="13" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="14" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="15" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="4" y="16" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.56"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7v-2h4v2zm6-4H7v-2h10v2zm0-4H7V7h10v2z" />
     </svg>
   ),
   pms: (
-    <svg width="18" height="18" viewBox="0 0 20 18" fill="none">
-      <rect x="2" y="0" width="15" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="2" y="1" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="2" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="3" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="4" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="8" y="4" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="5" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="7" y="5" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="14" y="5" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="1" y="6" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="7" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="8" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="9" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="10" width="17" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="1" y="11" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="6" y="11" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.7"/>
-      <rect x="15" y="11" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="12" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="13" width="17" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="14" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="15" width="15" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="5" y="16" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.34"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7v-2h4v2zm6-4H7v-2h10v2zm0-4H7V7h10v2z" />
     </svg>
   ),
   meeting: (
-    <svg width="18" height="18" viewBox="0 0 23 21" fill="none">
-      <rect x="2" y="0" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="1" y="1" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="16" y="1" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.37"/>
-      <rect x="1" y="2" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="15" y="2" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="3" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.64"/>
-      <rect x="14" y="3" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="1" y="4" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="4" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="1" y="5" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="6" y="5" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="15" y="5" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="6" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="15" y="6" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.61"/>
-      <rect x="2" y="7" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="7" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="3" y="8" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.19"/>
-      <rect x="13" y="8" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="4" y="9" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.63"/>
-      <rect x="13" y="9" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="3" y="10" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.78"/>
-      <rect x="3" y="11" width="6" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="10" y="11" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="12" width="6" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="10" y="12" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="13" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="10" y="13" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="4" y="14" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="9" y="14" width="13" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="15" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.69"/>
-      <rect x="10" y="15" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="16" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="16" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="17" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="11" y="17" width="11" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="18" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="20" y="18" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.6"/>
-      <rect x="1" y="19" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="20" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.43"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
     </svg>
   ),
   register: (
-    <svg width="18" height="18" viewBox="0 0 20 21" fill="none">
-      <rect x="9" y="0" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.27"/>
-      <rect x="8" y="1" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="6" y="2" width="8" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="3" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.7"/>
-      <rect x="6" y="3" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.84"/>
-      <rect x="2" y="4" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="6" y="4" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="2" y="5" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="5" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.7"/>
-      <rect x="14" y="5" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="2" y="6" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="13" y="6" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="2" y="7" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="8" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="9" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.85"/>
-      <rect x="9" y="9" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.75"/>
-      <rect x="2" y="10" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="10" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.16"/>
-      <rect x="8" y="10" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="2" y="11" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="12" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="13" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="14" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="9" y="14" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.78"/>
-      <rect x="2" y="15" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="15" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.18"/>
-      <rect x="8" y="15" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="14" y="15" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="16" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="17" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="18" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="19" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="20" width="15" height="1" rx="0.3" fill="currentColor"/>
-    </svg>
-  ),
-  socialmedia: (
-    <svg width="18" height="18" viewBox="0 0 22 19" fill="none">
-      <rect x="2" y="0" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.26"/>
-      <rect x="1" y="1" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="2" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="3" width="19" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="1" y="4" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.69"/>
-      <rect x="17" y="4" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="5" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="5" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="6" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="6" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="7" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="17" y="7" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="8" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="8" y="8" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.78"/>
-      <rect x="1" y="9" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="9" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="10" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="10" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="1" y="11" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="11" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="12" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="13" width="19" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="1" y="14" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="15" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="14" y="15" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.75"/>
-      <rect x="1" y="16" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="17" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="18" width="17" height="1" rx="0.3" fill="currentColor" opacity="0.61"/>
-    </svg>
-  ),
-  accounts: (
-    <svg width="18" height="18" viewBox="0 0 20 22" fill="none">
-      <rect x="3" y="0" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.5"/>
-      <rect x="2" y="1" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="2" y="2" width="13" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="2" y="3" width="14" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="2" y="4" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="5" width="15" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="2" y="6" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="2" y="7" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="8" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.62"/>
-      <rect x="2" y="9" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="2" y="10" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="11" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.71"/>
-      <rect x="2" y="12" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.59"/>
-      <rect x="2" y="13" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="14" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="15" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="2" y="16" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="17" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="18" width="16" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="19" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="20" width="14" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-    </svg>
-  ),
-  attendance: (
-    <svg width="18" height="18" viewBox="0 0 22 19" fill="none">
-      <rect x="2" y="0" width="16" height="1" rx="0.3" fill="currentColor" opacity="0.34"/>
-      <rect x="1" y="1" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="2" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="3" width="19" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="1" y="4" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="17" y="4" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="5" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="5" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="6" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="17" y="6" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="7" width="10" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="17" y="7" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="8" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="8" y="8" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="1" y="9" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="9" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="10" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="10" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.68"/>
-      <rect x="17" y="10" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="11" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="8" y="11" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="12" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="13" width="19" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="1" y="14" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="15" width="12" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="14" y="15" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="17" y="15" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="1" y="16" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="1" y="17" width="19" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="18" width="17" height="1" rx="0.3" fill="currentColor" opacity="0.53"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
     </svg>
   ),
   siteinspection: (
-    <svg width="18" height="18" viewBox="0 0 20 21" fill="none">
-      <rect x="8" y="0" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="1" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="2" y="2" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.56"/>
-      <rect x="6" y="2" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="2" y="3" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="6" y="3" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.87"/>
-      <rect x="2" y="4" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="4" width="7" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="4" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="2" y="5" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.82"/>
-      <rect x="13" y="5" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="2" y="6" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="7" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="8" width="6" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="9" y="8" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="2" y="9" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="9" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.3"/>
-      <rect x="8" y="9" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="14" y="9" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="2" y="10" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="7" y="10" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="11" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="12" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="13" width="6" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="9" y="13" width="8" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="14" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="6" y="14" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.38"/>
-      <rect x="8" y="14" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.75"/>
-      <rect x="14" y="14" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="2" y="15" width="4" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="7" y="15" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="16" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="17" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="18" width="15" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="19" width="15" height="1" rx="0.3" fill="currentColor"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+    </svg>
+  ),
+  socialmedia: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 16H6v-2h12v2zm0-4H6v-2h12v2zm0-4H6V6h12v4z" />
+    </svg>
+  ),
+  accounts: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 14H9v-2h6v2zm2-4H7v-2h10v2zm0-4H7V7h10v2z" />
+    </svg>
+  ),
+  fileexpenses: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 14H9v-2h6v2zm2-4H7v-2h10v2zm0-4H7V7h10v2z" />
+    </svg>
+  ),
+  attendance: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-12 4h3v3H7V7zm0 5h3v3H7v-3zm0 5h3v2H7v-2zm5-10h5v3h-5V7zm0 5h5v3h-5v-3zm0 5h5v2h-5v-2z" />
     </svg>
   ),
   location: (
-    <svg width="18" height="18" viewBox="0 0 22 19" fill="none">
-      <rect x="6" y="0" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.77"/>
-      <rect x="3" y="1" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.67"/>
-      <rect x="9" y="1" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.4"/>
-      <rect x="2" y="2" width="10" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="2" y="3" width="9" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="15" y="3" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.57"/>
-      <rect x="1" y="4" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="8" y="4" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="15" y="4" width="5" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="0" y="5" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="9" y="5" width="11" height="1" rx="0.3" fill="currentColor" opacity="0.73"/>
-      <rect x="1" y="6" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.69"/>
-      <rect x="9" y="6" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="14" y="6" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="18" y="6" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.79"/>
-      <rect x="2" y="7" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="9" y="7" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="14" y="7" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.74"/>
-      <rect x="1" y="8" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.72"/>
-      <rect x="8" y="8" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="14" y="8" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="1" y="9" width="12" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="15" y="9" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.51"/>
-      <rect x="17" y="9" width="1" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="3" y="10" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.86"/>
-      <rect x="11" y="10" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.3"/>
-      <rect x="13" y="10" width="5" height="1" rx="0.3" fill="currentColor" opacity="0.57"/>
-      <rect x="4" y="11" width="6" height="1" rx="0.3" fill="currentColor" opacity="0.78"/>
-      <rect x="11" y="11" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.89"/>
-      <rect x="8" y="12" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.38"/>
-      <rect x="11" y="12" width="8" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="10" y="13" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.81"/>
-      <rect x="16" y="13" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.88"/>
-      <rect x="10" y="14" width="3" height="1" rx="0.3" fill="currentColor"/>
-      <rect x="16" y="14" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.83"/>
-      <rect x="11" y="15" width="3" height="1" rx="0.3" fill="currentColor" opacity="0.75"/>
-      <rect x="15" y="15" width="4" height="1" rx="0.3" fill="currentColor" opacity="0.8"/>
-      <rect x="10" y="16" width="9" height="1" rx="0.3" fill="currentColor" opacity="0.76"/>
-      <rect x="11" y="17" width="7" height="1" rx="0.3" fill="currentColor" opacity="0.65"/>
-      <rect x="13" y="18" width="2" height="1" rx="0.3" fill="currentColor" opacity="0.4"/>
-      <rect x="16" y="18" width="1" height="1" rx="0.3" fill="currentColor" opacity="0.18"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+    </svg>
+  ),
+  leave: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+    </svg>
+  ),
+  wallet: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6v2H5z" />
+      <circle cx="16" cy="12" r="1.5" />
     </svg>
   ),
   progressreport: (
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <rect x="2" y="10" width="3.5" height="8" rx="1.2" fill="currentColor"/>
-      <rect x="8.2" y="4" width="3.5" height="14" rx="1.2" fill="currentColor"/>
-      <rect x="14.5" y="7" width="3.5" height="11" rx="1.2" fill="currentColor"/>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4 11h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm6.5-7h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6.5 4h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
     </svg>
   ),
 };
