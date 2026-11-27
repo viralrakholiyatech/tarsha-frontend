@@ -410,7 +410,19 @@ const Header = (props) => {
         {/* ── Right: search + actions ── */}
         <div style={{ display:"flex", alignItems:"center", gap:10 }}>
 
-        
+          {/* Tarsha Brand Logo */}
+          <div style={{ display: "flex", alignItems: "center", marginRight: 6, paddingRight: 12, borderRight: `1.5px solid ${THEME.border}` }}>
+            <img
+              src="/img/tarsha_logo.png"
+              alt="Tarsha Tech"
+              style={{
+                height: 26,
+                maxWidth: 115,
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
+          </div>
 
           {/* Add + menu */}
           <div style={{ position:"relative" }} ref={addRef}>

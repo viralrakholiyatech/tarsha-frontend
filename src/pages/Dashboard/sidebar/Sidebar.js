@@ -943,27 +943,6 @@ const Sidebar = () => {
           </>
         )}
 
-        {/* ── Tarsha Logo (after Location) ── */}
-        <div
-          style={{
-            margin: "20px 14px 16px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src="/img/tarsha_logo.png"
-            alt="Tarsha Tech"
-            style={{
-              maxHeight: 32,
-              maxWidth: 160,
-              objectFit: "contain",
-              display: "block",
-            }}
-          />
-        </div>
-
         <div className="sb-spacer" />
       </aside>
     </>
