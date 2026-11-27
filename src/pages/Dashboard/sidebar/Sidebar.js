@@ -116,17 +116,13 @@ const CSS = `
     width:3px;height:70%;background:${T.brand};border-radius:0 3px 3px 0;
   }
   .sb-item-icon {
-    width:18px;height:18px;flex-shrink:0;opacity:0.75;
-    filter:brightness(2);
+    width:18px;height:18px;flex-shrink:0;opacity:0.8;
+    display:inline-flex;align-items:center;justify-content:center;
+    color:currentColor;
   }
-  .sb-item-icon.white-icon,
-  .sb-item-icon[src*="Tentetive"],
-  .sb-item-icon[src*="tentetive"],
-  .sb-item-icon[src*="Tentative"],
-  .sb-item-icon[src*="tentative"] {
-    filter: brightness(0) invert(1) !important;
-  }
-  .sb-item.active .sb-item-icon { opacity:1; }
+  .sb-item-icon svg { width:18px;height:18px;display:block;stroke:currentColor; }
+  .sb-item:hover .sb-item-icon { opacity:1;color:#fff; }
+  .sb-item.active .sb-item-icon { opacity:1;color:${T.textActive}; }
   .sb-item .sb-chevron {
     margin-left:auto;font-size:10px;transition:transform 0.2s;opacity:0.5;
   }
@@ -212,10 +208,169 @@ const SubSubMenu = memo(({ open, children }) =>
   ) : null,
 );
 
-// ─── Icon img ────────────────────────────────
-const Icon = memo(({ src, alt, className = "" }) => (
-  <img className={`sb-item-icon ${className}`.trim()} src={src} alt={alt} />
-));
+// ─── Inline Sidebar SVGs ───────────────────────
+const SIDEBAR_SVGS = {
+  dashboard: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="14" width="7" height="7" rx="1.5" />
+      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+    </svg>
+  ),
+  team: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  ),
+  master: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <ellipse cx="12" cy="5" rx="9" ry="3" />
+      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+    </svg>
+  ),
+  tentative: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+    </svg>
+  ),
+  approval: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+      <polyline points="22 4 12 14.01 9 11.01" />
+    </svg>
+  ),
+  architecture: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="18" y1="20" x2="18" y2="10" />
+      <line x1="12" y1="20" x2="12" y2="4" />
+      <line x1="6" y1="20" x2="6" y2="14" />
+      <line x1="2" y1="20" x2="22" y2="20" />
+    </svg>
+  ),
+  interior: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  ),
+  task: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="9 11 12 14 22 4" />
+      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+    </svg>
+  ),
+  meeting: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+      <line x1="16" y1="2" x2="16" y2="6" />
+      <line x1="8" y1="2" x2="8" y2="6" />
+      <line x1="3" y1="10" x2="21" y2="10" />
+    </svg>
+  ),
+  siteinspection: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  ),
+  attendance: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  ),
+  fileexpenses: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2" />
+      <line x1="2" y1="10" x2="22" y2="10" />
+    </svg>
+  ),
+  leave: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="12" y1="18" x2="12" y2="12" />
+      <line x1="9" y1="15" x2="15" y2="15" />
+    </svg>
+  ),
+  wallet: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4" />
+      <path d="M4 6v12c0 1.1.9 2 2 2h14v-4" />
+      <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z" />
+    </svg>
+  ),
+  location: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <line x1="2" y1="12" x2="22" y2="12" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  ),
+  socialmedia: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+    </svg>
+  ),
+};
+
+const getSidebarIcon = (iconName) => {
+  if (!iconName) return null;
+  const key = iconName.toLowerCase().replace(".svg", "").replace(".png", "");
+  if (key.includes("dashboard")) return SIDEBAR_SVGS.dashboard;
+  if (key.includes("team") || key.includes("member")) return SIDEBAR_SVGS.team;
+  if (key.includes("master")) return SIDEBAR_SVGS.master;
+  if (key.includes("tent")) return SIDEBAR_SVGS.tentative;
+  if (key.includes("approv")) return SIDEBAR_SVGS.approval;
+  if (key.includes("arch")) return SIDEBAR_SVGS.architecture;
+  if (key.includes("interior")) return SIDEBAR_SVGS.interior;
+  if (key.includes("task") || key.includes("todo") || key.includes("workflow") || key.includes("pms")) return SIDEBAR_SVGS.task;
+  if (key.includes("meet")) return SIDEBAR_SVGS.meeting;
+  if (key.includes("site") || key.includes("inspect")) return SIDEBAR_SVGS.siteinspection;
+  if (key.includes("attend")) return SIDEBAR_SVGS.attendance;
+  if (key.includes("expense") || key.includes("file")) return SIDEBAR_SVGS.fileexpenses;
+  if (key.includes("leave")) return SIDEBAR_SVGS.leave;
+  if (key.includes("wallet") || key.includes("pay")) return SIDEBAR_SVGS.wallet;
+  if (key.includes("location")) return SIDEBAR_SVGS.location;
+  if (key.includes("social")) return SIDEBAR_SVGS.socialmedia;
+  return SIDEBAR_SVGS[key] || (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+};
+
+// ─── Icon Component ──────────────────────────
+const Icon = memo(({ src, alt, className = "", iconName = "" }) => {
+  const svg = getSidebarIcon(iconName || alt);
+  if (svg) {
+    return (
+      <span className={`sb-item-icon ${className}`.trim()}>
+        {svg}
+      </span>
+    );
+  }
+  return (
+    <img
+      className={`sb-item-icon ${className}`.trim()}
+      src={src}
+      alt={alt}
+      onError={(e) => { e.currentTarget.style.display = "none"; }}
+    />
+  );
+});
 
 // ─────────────────────────────────────────────
 //  NAV ATOMS  (all memo)
@@ -223,11 +378,12 @@ const Icon = memo(({ src, alt, className = "" }) => (
 const NavItem = memo(({ to, active, icon, label, iconClass = "", iconSvg = null }) => (
   <Link to={to} className={`sb-item${active ? " active" : ""}`}>
     {iconSvg ? (
-      <span className="sb-item-icon" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+      <span className="sb-item-icon">
         {iconSvg}
       </span>
     ) : icon ? (
       <Icon
+        iconName={icon}
         src={`${FileUrl}/img/icons/${icon}`}
         alt={label}
         className={iconClass}
@@ -243,15 +399,20 @@ const SubItem = memo(({ to, active, label }) => (
   </Link>
 ));
 
-const DropToggle = memo(({ icon, label, open, onToggle, iconClass = "" }) => (
+const DropToggle = memo(({ icon, label, open, onToggle, iconClass = "", iconSvg = null }) => (
   <div className="sb-item" onClick={onToggle}>
-    {icon && (
+    {iconSvg ? (
+      <span className="sb-item-icon">
+        {iconSvg}
+      </span>
+    ) : icon ? (
       <Icon
+        iconName={icon}
         src={`${FileUrl}/img/icons/${icon}`}
         alt={label}
         className={iconClass}
       />
-    )}
+    ) : null}
     <span>{label}</span>
     <Chevron open={open} />
   </div>
