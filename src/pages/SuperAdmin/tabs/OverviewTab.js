@@ -291,7 +291,7 @@ const ModuleAdoptionChart = ({ companies = [] }) => {
     { key: "Meeting", label: "Meetings" },
     { key: "Team", label: "Team / HR" },
     { key: "Interior", label: "Interior Design" },
-    { key: "Finance", label: "Finance & Bills" },
+    // { key: "Finance", label: "Finance & Bills" },
     { key: "Architecture", label: "Architecture" },
     { key: "Site Inspection", label: "Site Inspection" },
   ];

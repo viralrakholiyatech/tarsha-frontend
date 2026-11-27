@@ -764,7 +764,7 @@ const Sidebar = () => {
                   label="Shift"
                 />
               )}
-              {hasFeature("Finance") && (
+              {/* {hasFeature("Finance") && (
                 <>
                   <SubItem
                     to={`/${VendorRoute.list}`}
@@ -777,7 +777,7 @@ const Sidebar = () => {
                     label="Ledgers"
                   />
                 </>
-              )}
+              )} */}
             </SubMenu>
           </>
         )}
@@ -920,8 +920,8 @@ const Sidebar = () => {
           </>
         )}
 
-        {/* ── Social Media ── */}
-        {hasAnyFeature("Social Media", "Leads") && (
+        {/* ── Social Media (Hidden) ── */}
+        {/* {hasAnyFeature("Social Media", "Leads") && (
           <>
             <SectionHead label="Social Media" />
             <DropToggle
@@ -946,10 +946,10 @@ const Sidebar = () => {
               )}
             </SubMenu>
           </>
-        )}
+        )} */}
 
-        {/* ── Finance ── */}
-        {hasFeature("Finance") && (isAdmin || myId === 290) && (
+        {/* ── Finance / Accounts (Hidden) ── */}
+        {/* {hasFeature("Finance") && (isAdmin || myId === 290) && (
           <>
             <SectionHead label="Finance" />
             <DropToggle
@@ -981,7 +981,6 @@ const Sidebar = () => {
                 active={a.paymentsExpense}
                 label="Payment"
               />
-              {/* ── Escrow nested dropdown ── */}
               <SubToggle
                 open={openSub === "escrow"}
                 onToggle={() => toggleSub("escrow")}
@@ -1005,7 +1004,7 @@ const Sidebar = () => {
               </SubSubMenu>
             </SubMenu>
           </>
-        )}
+        )} */}
 
         {/* ── HR ── */}
         {hasAnyFeature("HR", "Team") && (
@@ -1037,14 +1036,14 @@ const Sidebar = () => {
                     label="Leaves"
                   />
                 )}
-                {hasAnyFeature("HR", "Finance") && !isCordinator && (
+                {/* {hasAnyFeature("HR", "Finance") && !isCordinator && (
                   <NavItem
                     to={`/${EmpRoute.deposit_expense_report}/${getUserId()}`}
                     active={false}
                     icon="Wallet.svg"
                     label="Wallet"
                   />
-                )}
+                )} */}
                 <NavItem
                   to={`/${EmpRoute.hrprofile}/${myId}`}
                   active={a.hrProfile}
