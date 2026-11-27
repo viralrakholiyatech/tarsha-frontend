@@ -197,7 +197,16 @@ export const shouldAllowedOfRoles = (
 };
 
 export const getCompanyLogo = () => {
-  return "/img/tarsha_logo.png";
+  try {
+    if (localStorage.getItem("userinfo")) {
+      const u = JSON.parse(localStorage.getItem("userinfo"));
+      if (u?.company_logo) return u.company_logo;
+      if (u?.firm_logo) return u.firm_logo;
+    }
+    const stored = localStorage.getItem("company_logo");
+    if (stored) return stored;
+  } catch (err) {}
+  return "/img/logo.png";
 };
 
 export const getCompanyFeatures = () => {

@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import useLocalStorage, {
   getUserRoles,
   superAccess,
+  getCompanyLogo,
 } from "../../services/useLocalStorage";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm } from "react-hook-form";
@@ -274,12 +275,12 @@ const Login = () => {
           {/* Company Logo */}
           <div className="lg-logo" style={{ marginBottom: 20 }}>
             <img
-              src="/img/tarsha_logo.png"
-              alt="Tarsha Logo"
+              src={getCompanyLogo()}
+              alt="Company Logo"
               style={{ maxHeight: 46, maxWidth: 200, objectFit: "contain" }}
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = "/img/tarsha_logo.png";
+                e.currentTarget.src = "/img/logo.png";
               }}
             />
           </div>

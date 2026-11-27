@@ -535,12 +535,12 @@ const Sidebar = () => {
             }}
           >
             <img
-              src="/img/tarsha_logo.png"
-              alt="Tarsha Logo"
+              src={getCompanyLogo()}
+              alt="Company Logo"
               style={{ maxHeight: 34, maxWidth: "100%", objectFit: "contain", display: "block" }}
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = "/img/tarsha_logo.png";
+                e.currentTarget.src = "/img/logo.png";
               }}
             />
           </Link>
@@ -948,6 +948,31 @@ const Sidebar = () => {
             </SubMenu>
           </>
         )}
+
+        {/* ── Tarsha Logo (after Location) ── */}
+        <div
+          style={{
+            margin: "24px 14px 16px",
+            padding: "8px 14px",
+            background: "#ffffff",
+            borderRadius: "10px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
+          }}
+        >
+          <img
+            src="/img/tarsha_logo.png"
+            alt="Tarsha Tech"
+            style={{
+              maxHeight: 28,
+              maxWidth: "100%",
+              objectFit: "contain",
+              display: "block",
+            }}
+          />
+        </div>
 
         <div className="sb-spacer" />
       </aside>
