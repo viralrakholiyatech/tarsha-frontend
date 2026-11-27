@@ -49,6 +49,7 @@ import {
   CityRoute,
   DepartmentRoute,
   WorkflowRoute,
+  ProgressReportRoute,
 } from "../config/RouteConfig";
 
 // ✅ Lazy load everything else
@@ -298,6 +299,9 @@ const ArchitectureRiskMatrix = lazy(
   () => import("../pages/MainPages/Architecture/RiskMatrix"),
 );
 const MstList = lazy(() => import("../pages/MainPages/Architecture/MstList"));
+const ProgressReport = lazy(
+  () => import("../pages/MainPages/report/ProgressReport"),
+);
 const EditArchitecture = lazy(
   () => import("../pages/MainPages/Architecture/EditArchitecture"),
 );
@@ -1967,6 +1971,18 @@ const Application = () => {
               <Wrapper
                 headerTitle={"Edit Expense"}
                 children={<ExpenseEdit />}
+              />
+            }
+          />
+        </Route>
+
+        <Route element={<RequireAuth accessible={[adminKey, empKey]} />}>
+          <Route
+            path={`/${ProgressReportRoute.list}`}
+            element={
+              <Wrapper
+                headerTitle={"Progress Report"}
+                children={<ProgressReport />}
               />
             }
           />

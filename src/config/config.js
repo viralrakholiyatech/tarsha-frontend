@@ -3906,6 +3906,10 @@ module.exports = {
     method: "GET",
     url: `${URL}/workflow/team-members`,
   },
+  getProgressReport: {
+    method: "GET",
+    url: `${URL}/progress-report`,
+  },
   s3UploadUrl: {
     method: "POST",
     url: `${URL}/s3/upload-url`,

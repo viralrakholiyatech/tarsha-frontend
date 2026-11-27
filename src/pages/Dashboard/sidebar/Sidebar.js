@@ -41,6 +41,7 @@ import {
   CityRoute,
   DepartmentRoute,
   // WorkflowRoute
+  ProgressReportRoute,
 } from "../../../config/RouteConfig";
 import {
   getRole,
@@ -530,6 +531,7 @@ const Sidebar = () => {
         pathname === `/${TodosRoute.list}` ||
         pathname === `/${TodosRoute.add}` ||
         segment1 === TodosRoute.edit,
+      progressReport: pathname === `/${ProgressReportRoute.list}`,
 
       // workflow:
       //   pathname === `/${WorkflowRoute.list}` ||
@@ -861,6 +863,23 @@ const Sidebar = () => {
                 active={a.todos}
                 icon="Task.svg"
                 label="Task"
+              />
+            )}
+
+            {/* Progress Report */}
+            {(isAdminOrSubadmin || isEmployee) && (
+              <NavItem
+                to={`/${ProgressReportRoute.list}`}
+                active={a.progressReport}
+                icon="Dashboard.svg"
+                iconSvg={
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                  </svg>
+                }
+                label="Progress Report"
               />
             )}
 

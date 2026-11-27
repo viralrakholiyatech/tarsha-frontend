@@ -33,6 +33,9 @@ module.exports = {
   DepartmentRoute: {
     list: "department",
   },
+  ProgressReportRoute: {
+    list: "progress-report",
+  },
   TpschemeRoute: {
     list: "tpscheme",
   },
