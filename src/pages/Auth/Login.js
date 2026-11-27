@@ -274,11 +274,9 @@ const Login = () => {
           {/* Company Logo */}
           <div className="lg-logo" style={{ marginBottom: 20 }}>
             <img
-              src={
-                localStorage.getItem("company_logo") || "/img/tarsha_logo.png"
-              }
-              alt="Company Logo"
-              style={{ maxHeight: 42, maxWidth: 180, objectFit: "contain" }}
+              src="/img/tarsha_logo.png"
+              alt="Tarsha Logo"
+              style={{ maxHeight: 46, maxWidth: 200, objectFit: "contain" }}
               onError={(e) => {
                 e.currentTarget.onerror = null;
                 e.currentTarget.src = "/img/tarsha_logo.png";
@@ -373,7 +371,7 @@ const Login = () => {
               textAlign: "center",
             }}
           >
-            © {new Date().getFullYear()} Zaid Excel Design. All rights reserved.
+            © {new Date().getFullYear()} Tarsha. All rights reserved.
           </p>
         </div>
 

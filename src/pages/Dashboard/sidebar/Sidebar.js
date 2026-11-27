@@ -519,12 +519,25 @@ const Sidebar = () => {
           </span> */}
         </div>
         {/* ── Logo ── */}
-        <div className="sb-logo" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "10px" }}>
-          <Link to={`/${dashboard.list}`}>
+        <div className="sb-logo" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "14px 12px" }}>
+          <Link
+            to={`/${dashboard.list}`}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#ffffff",
+              padding: "7px 14px",
+              borderRadius: "10px",
+              width: "100%",
+              maxWidth: "190px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
+            }}
+          >
             <img
-              src={getCompanyLogo()}
-              alt="Company Logo"
-              style={{ maxHeight: 38, maxWidth: 160, objectFit: "contain", display: "block" }}
+              src="/img/tarsha_logo.png"
+              alt="Tarsha Logo"
+              style={{ maxHeight: 34, maxWidth: "100%", objectFit: "contain", display: "block" }}
               onError={(e) => {
                 e.currentTarget.onerror = null;
                 e.currentTarget.src = "/img/tarsha_logo.png";

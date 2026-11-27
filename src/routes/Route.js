@@ -490,161 +490,19 @@ const PageLoader = () => (
       }
     `}</style>
 
-    {/* ── Animated architectural logo mark ── */}
-    <div style={{ marginBottom: 28 }}>
-      <svg
-        width="90"
-        height="90"
-        viewBox="0 0 90 90"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Outer ring */}
-        <circle
-          cx="45"
-          cy="45"
-          r="42"
-          stroke="#EDE5D5"
-          strokeWidth="1.5"
-          fill="#FEFCF9"
-        />
-
-        {/* Building / architectural mark — 3 layered shapes */}
-
-        {/* Base platform */}
-        <path
-          className="pl-logo-path"
-          d="M20 66 H70"
-          stroke="#C4A97D"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-
-        {/* Left column */}
-        <path
-          className="pl-logo-path"
-          d="M28 66 V38 H36 V66"
-          stroke="#887549"
-          strokeWidth="2"
-          strokeLinejoin="round"
-          fill="#F5F0E8"
-        />
-
-        {/* Right column */}
-        <path
-          className="pl-logo-path-2"
-          d="M54 66 V38 H62 V66"
-          stroke="#887549"
-          strokeWidth="2"
-          strokeLinejoin="round"
-          fill="#F5F0E8"
-        />
-
-        {/* Central tower */}
-        <path
-          className="pl-logo-path-2"
-          d="M38 66 V30 H52 V66"
-          stroke="#5C4E32"
-          strokeWidth="2"
-          strokeLinejoin="round"
-          fill="#EDE5D5"
-        />
-
-        {/* Roof / pediment triangle */}
-        <path
-          className="pl-logo-path-3"
-          d="M22 38 L45 20 L68 38 Z"
-          stroke="#887549"
-          strokeWidth="2"
-          strokeLinejoin="round"
-          fill="#F5F0E8"
-        />
-
-        {/* Door cutout on central tower */}
-        <path
-          className="pl-logo-path-3"
-          d="M42 66 V54 Q42 50 45 50 Q48 50 48 54 V66"
-          stroke="#887549"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-          fill="#C4A97D"
-        />
-
-        {/* Inner accent — window dots */}
-        <circle
-          className="pl-logo-path-3"
-          cx="32"
-          cy="50"
-          r="2"
-          fill="#C4A97D"
-          stroke="none"
-        />
-        <circle
-          className="pl-logo-path-3"
-          cx="58"
-          cy="50"
-          r="2"
-          fill="#C4A97D"
-          stroke="none"
-        />
-        <circle
-          className="pl-logo-path-3"
-          cx="32"
-          cy="58"
-          r="2"
-          fill="#C4A97D"
-          stroke="none"
-        />
-        <circle
-          className="pl-logo-path-3"
-          cx="58"
-          cy="58"
-          r="2"
-          fill="#C4A97D"
-          stroke="none"
-        />
-
-        {/* Crown accent line */}
-        <path
-          className="pl-logo-path-3"
-          d="M36 38 H54"
-          stroke="#C4A97D"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-      </svg>
+    {/* ── Tarsha Logo ── */}
+    <div style={{ marginBottom: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <img
+        src="/img/tarsha_logo.png"
+        alt="Tarsha"
+        style={{
+          maxHeight: 52,
+          maxWidth: 220,
+          objectFit: "contain",
+          animation: "pl-rise 0.6s ease forwards",
+        }}
+      />
     </div>
-
-    {/* ── Brand name ── */}
-    <h1
-      className="pl-title"
-      style={{
-        margin: "0 0 4px",
-        fontFamily: "'Sora', sans-serif",
-        fontSize: 22,
-        fontWeight: 800,
-        color: "#1A1A2E",
-        letterSpacing: "-0.3px",
-      }}
-    >
-      Zaid Excel<span style={{ color: "#887549" }}>Design</span>
-    </h1>
-
-    <p
-      className="pl-subtitle"
-      style={{
-        margin: "0 0 28px",
-        fontSize: 11,
-        fontWeight: 600,
-        color: "#ADADAD",
-        textTransform: "uppercase",
-        letterSpacing: "0.14em",
-      }}
-    >
-      Architecture & Design
-    </p>
 
     {/* ── Progress bar ── */}
     <div

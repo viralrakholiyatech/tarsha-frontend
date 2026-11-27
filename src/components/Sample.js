@@ -999,7 +999,7 @@ const DefaultPic = ({data,pageNumber}) =>{
         
         <div className="container" style={{pageBreakBefore:'always'}}>
         <div className="div m-5">
-        <img src="https://www.zaidexceldesign.com/img/logo.svg" height={"200px"} width={"200px"}/>
+        <img src="/img/tarsha_logo.png" height={"200px"} width={"200px"}/>
                </div>
 
 
