@@ -519,25 +519,19 @@ const Sidebar = () => {
           </span> */}
         </div>
         {/* ── Logo ── */}
-        <div className="sb-logo" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "14px 12px" }}>
+        <div className="sb-logo" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "16px 14px" }}>
           <Link
             to={`/${dashboard.list}`}
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "#ffffff",
-              padding: "7px 14px",
-              borderRadius: "10px",
-              width: "100%",
-              maxWidth: "190px",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
             }}
           >
             <img
               src={getCompanyLogo()}
               alt="Company Logo"
-              style={{ maxHeight: 34, maxWidth: "100%", objectFit: "contain", display: "block" }}
+              style={{ maxHeight: 42, maxWidth: 170, objectFit: "contain", display: "block" }}
               onError={(e) => {
                 e.currentTarget.onerror = null;
                 e.currentTarget.src = "/img/logo.png";
@@ -952,22 +946,18 @@ const Sidebar = () => {
         {/* ── Tarsha Logo (after Location) ── */}
         <div
           style={{
-            margin: "24px 14px 16px",
-            padding: "8px 14px",
-            background: "#ffffff",
-            borderRadius: "10px",
+            margin: "20px 14px 16px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
           }}
         >
           <img
             src="/img/tarsha_logo.png"
             alt="Tarsha Tech"
             style={{
-              maxHeight: 28,
-              maxWidth: "100%",
+              maxHeight: 32,
+              maxWidth: 160,
               objectFit: "contain",
               display: "block",
             }}
