@@ -47,6 +47,7 @@ import {
   ReceiptRoute,
   PmsRoute,
   CityRoute,
+  DepartmentRoute,
   WorkflowRoute,
 } from "../config/RouteConfig";
 
@@ -168,6 +169,7 @@ const Previewlist = lazy(
 
 const VillageList = lazy(() => import("../pages/MainPages/Village/list"));
 const CityList = lazy(() => import("../pages/MainPages/city/List"));
+const DepartmentList = lazy(() => import("../pages/MainPages/department/List"));
 const TpschemeList = lazy(() => import("../pages/MainPages/Tpscheme/List"));
 
 const ApprovalList = lazy(
@@ -1241,6 +1243,14 @@ const Application = () => {
           <Route
             path={`/${CityRoute.list}`}
             element={<Wrapper headerTitle={"City"} children={<CityList />} />}
+          />
+        </Route>
+        <Route element={<RequireAuth accessible={[adminKey]} />}>
+          <Route
+            path={`/${DepartmentRoute.list}`}
+            element={
+              <Wrapper headerTitle={"Department"} children={<DepartmentList />} />
+            }
           />
         </Route>
         <Route element={<RequireAuth accessible={[adminKey]} />}>

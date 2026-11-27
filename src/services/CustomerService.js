@@ -11,7 +11,8 @@ import {
   deletePaymentcategoryConfig,
   deleteVendor,
   deleteLedger,
-  deleteCity
+  deleteCity,
+  deleteDepartment as deleteDepartmentConfig,
 } from "../config/config";
 
 export const getCustomers = async (token) => {
@@ -199,6 +200,22 @@ export const deleteledger = async (id, token) => {
     const res = await callApi(
       deleteLedger.method,
       deleteLedger.url,
+      { id },
+      0,
+      header,
+    );
+    return res;
+  } catch (err) {
+    return err;
+  }
+};
+
+export const deleteDepartment = async (id, token) => {
+  try {
+    const header = { Authorization: `Bearer ${token}` };
+    const res = await callApi(
+      deleteDepartmentConfig.method,
+      deleteDepartmentConfig.url,
       { id },
       0,
       header,

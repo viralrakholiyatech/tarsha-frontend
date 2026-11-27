@@ -30,6 +30,9 @@ module.exports = {
   CityRoute:{
     list:"city"
   },
+  DepartmentRoute: {
+    list: "department",
+  },
   TpschemeRoute: {
     list: "tpscheme",
   },

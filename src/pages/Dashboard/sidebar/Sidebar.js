@@ -39,6 +39,7 @@ import {
   ReceiptRoute,
   // PmsRoute,
   CityRoute,
+  DepartmentRoute,
   // WorkflowRoute
 } from "../../../config/RouteConfig";
 import {
@@ -492,6 +493,7 @@ const Sidebar = () => {
         segment1 === CustRoute.edit,
       village: pathname === `/${VillageRoute.list}`,
       city:pathname === `/${CityRoute.list}`,
+      department: pathname === `/${DepartmentRoute.list}`,
       tpscheme: pathname === `/${TpschemeRoute.list}`,
       meetingMaster: pathname === `/${MeetingRoute.addteam}`,
       shift: pathname === `/${ShiftRoute.list}`,
@@ -629,6 +631,7 @@ const Sidebar = () => {
       a.clients ||
       a.village ||
       a.city||
+      a.department ||
       a.tpscheme ||
       a.meetingMaster ||
       a.shift ||
@@ -744,6 +747,11 @@ const Sidebar = () => {
                 to={`/${CityRoute.list}`}
                 active={a.city}
                 label="City"
+              />
+              <SubItem
+                to={`/${DepartmentRoute.list}`}
+                active={a.department}
+                label="Department"
               />
               <SubItem
                 to={`/${TpschemeRoute.list}`}

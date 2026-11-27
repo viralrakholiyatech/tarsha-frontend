@@ -3882,6 +3882,22 @@ module.exports = {
     method: "POST",
     url: `${URL}/delete-city`,
   },
+  addDepartment: {
+    method: "POST",
+    url: `${URL}/department/add`,
+  },
+  getDepartmentById: {
+    method: "GET",
+    url: `${URL}/departmentbyid`,
+  },
+  updateDepartment: {
+    method: "POST",
+    url: `${URL}/department/update`,
+  },
+  deleteDepartment: {
+    method: "POST",
+    url: `${URL}/delete-department`,
+  },
   getWorkflowMeetingClarity: {
     method: "GET",
     url: `${URL}/workflow/meeting-clarity`,
