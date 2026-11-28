@@ -465,34 +465,138 @@ function OverduePill() {
   );
 }
 
+const DEFAULT_AVATAR =
+  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%23887549'><circle cx='12' cy='8' r='4'/><path d='M12 14c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z'/></svg>";
+
+const AVATAR_COLORS = [
+  "#1890FF",
+  "#52C41A",
+  "#FA8C16",
+  "#722ED1",
+  "#13C2C2",
+  "#EB2F96",
+  "#887549",
+  "#2F54EB",
+];
+
+const getAvatarColor = (str) => {
+  if (!str) return AVATAR_COLORS[0];
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
+};
+
 const AvatarStack = memo(({ profiles, title }) => {
-  if (!profiles || profiles === "null" || profiles.trim() === "") {
+  const cleanProfiles =
+    profiles && profiles !== "null" && profiles !== "undefined"
+      ? String(profiles)
+          .split(",")
+          .map((p) => p.trim())
+          .filter(Boolean)
+      : [];
+
+  const names =
+    title && title !== "null" && title !== "undefined"
+      ? String(title)
+          .split(",")
+          .map((n) => n.trim())
+          .filter(Boolean)
+      : [];
+
+  if (cleanProfiles.length === 0 && names.length === 0) {
     return <span style={{ color: THEME.textLight, fontSize: 12 }}>—</span>;
   }
+
+  const count = Math.max(cleanProfiles.length, names.length);
+  const items = [];
+  for (let i = 0; i < count; i++) {
+    const rawPath = cleanProfiles[i] || "";
+    const name = names[i] || names[0] || (cleanProfiles.length === 1 ? title : "") || "";
+    items.push({ path: rawPath, name });
+  }
+
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-      {profiles.split(",").map((path, i) => (
-        <img
-          key={i}
-          src={`${FileUrl}/${path.trim()}`}
-          alt=""
-          title={title || ""}
-          loading="lazy"
-          decoding="async"
-          style={{
-            width: 28,
-            height: 28,
-            borderRadius: "50%",
-            border: "2px solid #fff",
-            objectFit: "cover",
-            marginLeft: i === 0 ? 0 : -8,
-            boxShadow: "0 1px 3px rgba(0,0,0,0.15)",
-          }}
-          onError={(e) => {
-            e.target.style.display = "none";
-          }}
-        />
-      ))}
+      {items.map((item, i) => {
+        const cleanPath = item.path.replace(/\\/g, "/").trim();
+        const hasValidPath =
+          cleanPath &&
+          cleanPath !== "null" &&
+          cleanPath !== "undefined" &&
+          !cleanPath.endsWith("default/DefaultImage.png");
+
+        const src = hasValidPath
+          ? cleanPath.startsWith("http://") ||
+            cleanPath.startsWith("https://") ||
+            cleanPath.startsWith("data:")
+            ? cleanPath
+            : `${FileUrl}/${cleanPath.replace(/^\/+/, "")}`
+          : "";
+
+        const initial = item.name ? item.name.charAt(0).toUpperCase() : "";
+
+        if (src) {
+          return (
+            <img
+              key={i}
+              src={src}
+              alt={item.name || "User"}
+              title={item.name || title || "User"}
+              loading="lazy"
+              decoding="async"
+              style={{
+                width: 28,
+                height: 28,
+                borderRadius: "50%",
+                border: "2px solid #fff",
+                objectFit: "cover",
+                marginLeft: i === 0 ? 0 : -8,
+                boxShadow: "0 1px 3px rgba(0,0,0,0.15)",
+                backgroundColor: "#F5EFE4",
+              }}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = DEFAULT_AVATAR;
+              }}
+            />
+          );
+        }
+
+        return (
+          <div
+            key={i}
+            title={item.name || title || "User"}
+            style={{
+              width: 28,
+              height: 28,
+              borderRadius: "50%",
+              border: "2px solid #fff",
+              marginLeft: i === 0 ? 0 : -8,
+              boxShadow: "0 1px 3px rgba(0,0,0,0.15)",
+              backgroundColor: initial ? getAvatarColor(item.name) : "#F5EFE4",
+              color: "#fff",
+              fontSize: 11,
+              fontWeight: 700,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              userSelect: "none",
+            }}
+          >
+            {initial ? (
+              initial
+            ) : (
+              <img
+                src={DEFAULT_AVATAR}
+                alt="User"
+                style={{ width: 16, height: 16 }}
+              />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 });
@@ -782,12 +886,27 @@ const TaskRow = memo(({ item, index, onStatus, onCounter,  onUpdateTask, }) => {
   const myId = String(getUserId());
   const expired = isDueDateExpired(item.due_date) && item.status === 0;
 
-  // Collaboration column: show user_profile if current user IS the contributor
-  const collabProfiles =
-    item.contributon === myId ? item.user_profile : item.contribution_profiles;
+  const isCollab = item.contributon && item.contributon !== "0";
+  const amICollab =
+    String(item.contributon) === myId ||
+    String(item.contributon).includes(myId);
 
-  const collabTitle =
-    item.contributon === myId ? item.user_name : item.contributon_name;
+  // If current user is the contributor, collab partner is the creator/other person
+  const collabProfiles = amICollab
+    ? item.user_profile || item.contribution_profiles
+    : item.contribution_profiles;
+  const collabTitle = amICollab
+    ? item.user_name || item.contributon_name
+    : item.contributon_name;
+
+  const assignProfiles =
+    item.assign_to_profiles ||
+    (isCollab ? item.user_profile : "") ||
+    "";
+  const assignTitle =
+    item.assign_name ||
+    (isCollab ? item.user_name || "Creator" : "") ||
+    "";
 
   const clientLabel =
     item.client_name || item.cllii_name || item.sclient_name || "";
@@ -906,8 +1025,8 @@ const TaskRow = memo(({ item, index, onStatus, onCounter,  onUpdateTask, }) => {
       {/* Assigned To */}
       <td style={tdStyle()}>
         <AvatarStack
-          profiles={item.assign_to_profiles}
-          title={item.assign_name}
+          profiles={assignProfiles}
+          title={assignTitle}
         />
       </td>
 <td style={tdStyle()}>
