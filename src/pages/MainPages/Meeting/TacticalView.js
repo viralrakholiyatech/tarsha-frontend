@@ -152,7 +152,7 @@ const MemberCard = memo(({ item, onEdit, onTaskModal, onView }) => {
       <div className={`tv-member-header${open?" open":""}`} onClick={() => setOpen(v=>!v)}>
         <div style={{ display:"flex", alignItems:"center", gap:12, flex:1, minWidth:0 }}>
           <img src={`${FileUrl}/${item.profile_picture}`} alt="Member"
-            onError={(e)=>{e.target.onerror=null;e.target.src=`${FileUrl}/img/profile.jpeg`;}}
+            onError={(e)=>{e.target.onerror=null;e.target.src = "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2232%22%20fill%3D%22%23d1d5db%22%2F%3E%3Cpath%20d%3D%22M32%2014a12%2012%200%201%200%200%2024%2012%2012%200%200%200%200-24zm0%2028c-13.3%200-24%208.5-24%2019v3h48v-3c0-10.5-10.7-19-24-19z%22%20fill%3D%22%239ca3af%22%2F%3E%3C%2Fsvg%3E";}}
             style={{ width:42,height:42,borderRadius:"50%",objectFit:"cover",border:`2px solid ${THEME.border}`,flexShrink:0 }} />
           <div style={{ flex:1, minWidth:0 }}>
             <p style={{ margin:"0 0 5px", fontSize:14, fontWeight:700, color:THEME.text, fontFamily:"'Sora',sans-serif" }}>
