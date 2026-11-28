@@ -285,6 +285,7 @@ function BuildingPermission_add() {
   const [subactiveTab, setSubActiveTab] = useState("b_permission");
   const [teamId, setTeamId] = useState("");
   const [loading, setLoading] = useState(false);
+  const [applicationInward, setApplicationInward] = useState("");
   const [scrunityfees, setScrunityFees] = useState("");
   const [roadDeposit, setRoadDeposit] = useState("");
   const [scrunityCleared, setScrunityCleared] = useState(false);
