@@ -1,5 +1,5 @@
 // Vercel forwards /backend requests to the live server on port 7600 without browser mixed content.
-const LIVE_BACKEND = "http://62.72.30.155:7600";
+const LIVE_BACKEND = "http://62.72.30.155:1807";
 const resolveBackendUrl = (url) => {
   const normalized = url.replace(/\/+$/, "");
   return process.env.NODE_ENV === "production"

@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/backend/:path*",
-      "destination": "http://62.72.30.155:7600/:path*"
+      "destination": "http://62.72.30.155:1807/:path*"
     },
     {
       "source": "/:path*",
