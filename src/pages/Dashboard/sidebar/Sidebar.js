@@ -783,13 +783,13 @@ const Sidebar = () => {
                 active={a.vendors}
                 label="Vendors"
               />
-              {hasFeature("Finance") && (
+              {/* {hasFeature("Finance") && (
                 <SubItem
                   to={`/${LedgerRoute.list}`}
                   active={a.ledger}
                   label="Ledgers"
                 />
-              )}
+              )} */}
             </SubMenu>
           </>
         )}
