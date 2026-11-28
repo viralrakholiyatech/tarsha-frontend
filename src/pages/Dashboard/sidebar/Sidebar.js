@@ -778,20 +778,18 @@ const Sidebar = () => {
                   label="Shift"
                 />
               )}
-              {/* {hasFeature("Finance") && (
-                <>
-                  <SubItem
-                    to={`/${VendorRoute.list}`}
-                    active={a.vendors}
-                    label="Vendors"
-                  />
-                  <SubItem
-                    to={`/${LedgerRoute.list}`}
-                    active={a.ledger}
-                    label="Ledgers"
-                  />
-                </>
-              )} */}
+              <SubItem
+                to={`/${VendorRoute.list}`}
+                active={a.vendors}
+                label="Vendors"
+              />
+              {hasFeature("Finance") && (
+                <SubItem
+                  to={`/${LedgerRoute.list}`}
+                  active={a.ledger}
+                  label="Ledgers"
+                />
+              )}
             </SubMenu>
           </>
         )}
