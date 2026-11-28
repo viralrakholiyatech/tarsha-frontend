@@ -397,10 +397,18 @@ const DocumentAdd = () => {
     const selectedData = selectedItems[type];
     if (!selectedData?.length) { toast.error("No data selected"); return; }
     try {
-      await ApiService({ type, selectedData, id, teamId }, 0, header, addoredit.method, addoredit.url);
-      toast.success("Saved successfully");
-      fetchDocumentdata();
-    } catch(e){console.error(e);}
+      const res = await ApiService({ type, selectedData, id, teamId }, 0, header, addoredit.method, addoredit.url);
+      if (!res.data?.error) {
+        toast.success(res.data?.message || "Saved successfully");
+        setSelectedItems((prev) => ({ ...prev, [type]: [] }));
+        fetchDocumentdata();
+      } else {
+        toast.error(res.data?.message || "Error saving documents");
+      }
+    } catch(e) {
+      console.error(e);
+      toast.error(e?.response?.data?.message || "Failed to save documents");
+    }
   };
 
   // ── File upload ───────────────────────────
